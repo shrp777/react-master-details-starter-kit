@@ -13,6 +13,7 @@ export default function DetailsPage() {
   useEffect(() => {
     async function fetchDataFromAPI(id) {
       try {
+        //masque le message d'erreur
         setIsError(false);
         //affichage du message de chargement
         setIsLoading(true);
@@ -25,13 +26,15 @@ export default function DetailsPage() {
         //affectation des données récupérées via l'API
         setTask(response.data);
 
+        //masque le message d'erreur
         setIsError(false);
+        //masque le message de chargement
         setIsLoading(false);
       } catch (error) {
         console.error(error);
         //affichage du message d'erreur
         setIsError(true);
-
+        //masque le message de chargement
         setIsLoading(false);
       }
     }
