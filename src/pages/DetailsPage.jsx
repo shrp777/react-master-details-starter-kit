@@ -40,7 +40,7 @@ export default function DetailsPage() {
     }
 
     fetchDataFromAPI(id);
-  }, id);
+  }, id); //si la valeur de l'id évolue, la méthode "fetchDataFromAPI" est appelée
 
   return (
     <div>
